@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AUREA AI — Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="dark">
+  <header class="topbar">
+    <div class="logo">
+      <!-- logo placeholder (white dove over snowy peak) -->
+      <img src="/logo/logo.png" alt="AUREA" height="48">
+      <span>AUREA AI</span>
+    </div>
+    <div class="controls">
+      <select id="lang" onchange="changeLang(this.value)"></select>
+      <button onclick="openEditor()">Code Editor</button>
+      <button onclick="openVisual()">Visual Builder</button>
+      <a href="/admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="exchanges">
+      <h2 id="exTitle">Supported DEX</h2>
+      <div id="exList"></div>
+    </section>
+
+    <section id="strategy-actions">
+      <button onclick="testBuy()">Test BUY</button>
+      <button onclick="testSell()">Test SELL</button>
+      <button onclick="openVisual()">Open Visual Builder</button>
+    </section>
+
+    <section id="qrpay">
+      <h3>Subscribe — 10 USDT (Polygon)</h3>
+      <img id="qrimg" src="/api/payments/qr" alt="QR">
+      <p>Address: 0xfee37e7e64d70f37f96c42375131abb57c1481c2</p>
+    </section>
+
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
