@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AUREA AI — Admin</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="dark">
+  <header class="topbar">
+    <div class="logo"><img src="/logo/logo.png" height="40"> AUREA Admin</div>
+  </header>
+  <main>
+    <h2>Logs</h2>
+    <pre id="logs"></pre>
+    <h2>Stats</h2>
+    <pre id="stats"></pre>
+  </main>
+  <script>
+    async function load() {
+      const l = await fetch('/api/admin/logs').then(r=>r.json());
+      document.getElementById('logs').textContent = JSON.stringify(l, null, 2);
+      const s = await fetch('/api/admin/stats').then(r=>r.json());
+      document.getElementById('stats').textContent = JSON.stringify(s, null, 2);
+    }
+    load();
+  </script>
+</body>
+</html>
