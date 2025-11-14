@@ -1,0 +1,12 @@
+fastapi==0.98.0
+uvicorn[standard]==0.23.1
+pydantic==1.10.12
+httpx==0.24.0
+sqlalchemy==2.1.4
+databases==0.6.2
+web3==7.14.0
+python-dotenv==1.0.0
+qrcode==7.3
+cryptography==41.0.3
+aiofiles==23.1.0
+python-multipart==0.0.6
