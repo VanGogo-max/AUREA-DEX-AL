@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>AUREA TRADE – Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/app.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h1 data-i18n="dashboard_title">AUREA TRADE – Панел</h1>
+
+    <div class="section">
+        <h2 data-i18n="connect_wallet">Свързване на Wallet</h2>
+        <button onclick="connectWallet()" data-i18n="connect_btn">Свържи портфейл</button>
+        <p id="walletAddress"></p>
+    </div>
+
+    <div class="section">
+        <h2 data-i18n="select_exchange">Избор на DEX борса</h2>
+        <select id="exchangeSelect"></select>
+    </div>
+
+    <div class="section">
+        <h2 data-i18n="strategy_control">Стратегии</h2>
+        <button onclick="startStrategy()" data-i18n="start_strategy">Старт</button>
+        <button onclick="stopStrategy()" data-i18n="stop_strategy">Стоп</button>
+    </div>
+
+    <div class="section">
+        <h2 data-i18n="referral_system">Реферална система</h2>
+        <p><span data-i18n="your_ref_link">Твоят реферален линк:</span></p>
+        <input id="refLink" readonly>
+    </div>
+
+    <div class="section">
+        <h2 data-i18n="language">Език</h2>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+            <!-- ще се попълва автоматично -->
+        </select>
+    </div>
+
+    <footer>
+        <p data-i18n="disclaimer">
+            Търговията с криптовалути носи висок риск. Действайте разумно.
+        </p>
+    </footer>
+</div>
+</body>
+</html>
